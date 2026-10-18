@@ -1,0 +1,94 @@
+{
+ "source": "'Embedded Parts'!AA70:AC86",
+ "units": {
+  "length": "mm",
+  "col_AC": "unlabelled (probably kg per bolt)"
+ },
+ "note": "Size taken from the row block the formulas at AA88:AB95 address, not from column AA labels.",
+ "rows": [
+  {
+   "size": "M16",
+   "length": 75,
+   "col_AC": 0.193,
+   "sheet_label": "M16"
+  },
+  {
+   "size": "M16",
+   "length": 80,
+   "col_AC": 0.201,
+   "sheet_label": "M16"
+  },
+  {
+   "size": "M16",
+   "length": 100,
+   "col_AC": 0.232,
+   "sheet_label": "M16"
+  },
+  {
+   "size": "M20",
+   "length": 80,
+   "col_AC": 0.337,
+   "sheet_label": "M20"
+  },
+  {
+   "size": "M20",
+   "length": 100,
+   "col_AC": 0.385,
+   "sheet_label": "M20"
+  },
+  {
+   "size": "M20",
+   "length": 130,
+   "col_AC": 0.456,
+   "sheet_label": "M20"
+  },
+  {
+   "size": "M24",
+   "length": 90,
+   "col_AC": 0.572,
+   "sheet_label": "M24"
+  },
+  {
+   "size": "M24",
+   "length": 100,
+   "col_AC": 0.608,
+   "sheet_label": "M25"
+  },
+  {
+   "size": "M24",
+   "length": 120,
+   "col_AC": 0.679,
+   "sheet_label": "M26"
+  },
+  {
+   "size": "M24",
+   "length": 160,
+   "col_AC": 0.809,
+   "sheet_label": "M27"
+  },
+  {
+   "size": "M27",
+   "length": 110,
+   "col_AC": 0.855,
+   "sheet_label": "M27"
+  },
+  {
+   "size": "M27",
+   "length": 120,
+   "col_AC": 0.901,
+   "sheet_label": "M28"
+  },
+  {
+   "size": "M27",
+   "length": 140,
+   "col_AC": 0.971,
+   "sheet_label": "M29"
+  },
+  {
+   "size": "M27",
+   "length": 170,
+   "col_AC": 1.105,
+   "sheet_label": "M30"
+  }
+ ]
+}

@@ -1,0 +1,164 @@
+{
+ "beam_types": {
+  "source": "Lib!J5:J7 (BeamTypes)",
+  "values": [
+   "Fabricated Shape",
+   "I Shape",
+   "ISNT Shape"
+  ]
+ },
+ "gate_types": {
+  "source": "Lib!N5:N7 (GateType)",
+  "values": [
+   "Bulkhead (no wheels)",
+   "Fixed Wheel (cantilevered)",
+   "Fixed Wheel (double support)"
+  ]
+ },
+ "corrosion_allowance_mm": {
+  "source": "Lib!N10:N20 (CorAll)",
+  "values": [
+   0,
+   1.5875,
+   3,
+   3.175,
+   4,
+   4.762499999999999,
+   6.35,
+   7.9375,
+   9.524999999999999,
+   11.112499999999999,
+   12.7
+  ]
+ },
+ "friction": {
+  "source": "Lib!Q5:Q10 (friction)",
+  "values": [
+   {
+    "value": 0.02,
+    "label": "antifriction bearings (static)"
+   },
+   {
+    "value": 0.01,
+    "label": "anti-friction bearings (dynamic)"
+   },
+   {
+    "value": 0.15,
+    "label": "self-lubricated bronze bearings (static)"
+   },
+   {
+    "value": 0.1,
+    "label": "self-lubricated bronze bearings (dynamic)"
+   },
+   {
+    "value": 0.4,
+    "label": "bronze on stainless steel - unlubricated (static)"
+   },
+   {
+    "value": 0.2,
+    "label": "bronze on stainless steel - unlubricated (dynamic)"
+   }
+  ]
+ },
+ "ballast_density_kg_m3": {
+  "source": "Lib!Q15:Q16 (Ballast)",
+  "values": [
+   {
+    "value": 2402.77,
+    "label": "kg/cu.m for concrete ballast"
+   },
+   {
+    "value": 7849.05,
+    "label": "kg/cu.m for steel or iron ballast"
+   }
+  ]
+ },
+ "bolt_sizes": {
+  "source": "Lib!Q22:Q30 (CType)",
+  "values": [
+   "M10",
+   "M15",
+   "M20",
+   "M25",
+   "M30",
+   "M35",
+   "M40",
+   "M45",
+   "M50"
+  ]
+ },
+ "beam_spacing_methods": {
+  "source": "'Beam Spacing'!N6:N9",
+  "values": [
+   "Equal moments",
+   "Equal load (classic method)",
+   "Equal load (exact method)",
+   "Manual"
+  ]
+ },
+ "beam_spacing_rounding_m": {
+  "source": "'Beam Spacing'!Q5:Q10 (0, 1/16..1 inch in m)",
+  "values": [
+   0,
+   0.0015875,
+   0.003175,
+   0.00635,
+   0.0127,
+   0.0254
+  ]
+ },
+ "wheel_spacing_methods": {
+  "source": "'Wheel Spacing'!K6:K7",
+  "values": [
+   "Equal load",
+   "Manual"
+  ]
+ },
+ "gear_modules_mm": {
+  "source": "'Hoist(Rope Drum)'!W3:W19",
+  "values": [
+   1,
+   1.25,
+   1.5,
+   2,
+   2.5,
+   3,
+   4,
+   5,
+   6,
+   8,
+   10,
+   12,
+   16,
+   20,
+   25,
+   40,
+   50
+  ]
+ },
+ "motor_ratings_kW": {
+  "source": "Sheet3!L10:L29",
+  "values": [
+   0.52,
+   0.75,
+   1.5,
+   2.2,
+   3.7,
+   5.5,
+   7.5,
+   9.3,
+   11,
+   15,
+   18.5,
+   22.5,
+   26,
+   37,
+   45,
+   55,
+   67.5,
+   75,
+   90,
+   110
+  ]
+ }
+}

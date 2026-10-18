@@ -1,0 +1,292 @@
+{
+ "source": "'Sheet3'!A10:I34",
+ "units": {
+  "d": "mm",
+  "mass_CF": "kg/100m",
+  "mass_CWR": "kg/100m",
+  "mbf_1570_CF": "kN",
+  "mbf_1570_CWR": "kN",
+  "mbf_1770_CF": "kN",
+  "mbf_1770_CWR": "kN",
+  "mbf_1960_CF": "kN",
+  "mbf_1960_CWR": "kN"
+ },
+ "rows": [
+  {
+   "d": 8,
+   "mass_CF": 22.1,
+   "mass_CWR": 24.4,
+   "mbf_1570_CF": 30,
+   "mbf_1570_CWR": 32,
+   "mbf_1770_CF": 33,
+   "mbf_1770_CWR": 36,
+   "mbf_1960_CF": 37,
+   "mbf_1960_CWR": 40
+  },
+  {
+   "d": 9,
+   "mass_CF": 28,
+   "mass_CWR": 30.8,
+   "mbf_1570_CF": 37,
+   "mbf_1570_CWR": 40,
+   "mbf_1770_CF": 42,
+   "mbf_1770_CWR": 46,
+   "mbf_1960_CF": 47,
+   "mbf_1960_CWR": 51
+  },
+  {
+   "d": 10,
+   "mass_CF": 34.6,
+   "mass_CWR": 38.1,
+   "mbf_1570_CF": 46,
+   "mbf_1570_CWR": 50,
+   "mbf_1770_CF": 52,
+   "mbf_1770_CWR": 56,
+   "mbf_1960_CF": 58,
+   "mbf_1960_CWR": 62
+  },
+  {
+   "d": 11,
+   "mass_CF": 41.9,
+   "mass_CWR": 46.1,
+   "mbf_1570_CF": 56,
+   "mbf_1570_CWR": 60,
+   "mbf_1770_CF": 63,
+   "mbf_1770_CWR": 68,
+   "mbf_1960_CF": 70,
+   "mbf_1960_CWR": 76
+  },
+  {
+   "d": 12,
+   "mass_CF": 49.8,
+   "mass_CWR": 54.8,
+   "mbf_1570_CF": 67,
+   "mbf_1570_CWR": 72,
+   "mbf_1770_CF": 75,
+   "mbf_1770_CWR": 81,
+   "mbf_1960_CF": 83,
+   "mbf_1960_CWR": 90
+  },
+  {
+   "d": 13,
+   "mass_CF": 58.5,
+   "mass_CWR": 64.3,
+   "mbf_1570_CF": 78,
+   "mbf_1570_CWR": 84,
+   "mbf_1770_CF": 88,
+   "mbf_1770_CWR": 95,
+   "mbf_1960_CF": 98,
+   "mbf_1960_CWR": 105
+  },
+  {
+   "d": 14,
+   "mass_CF": 67.8,
+   "mass_CWR": 74.6,
+   "mbf_1570_CF": 91,
+   "mbf_1570_CWR": 98,
+   "mbf_1770_CF": 102,
+   "mbf_1770_CWR": 110,
+   "mbf_1960_CF": 113,
+   "mbf_1960_CWR": 122
+  },
+  {
+   "d": 16,
+   "mass_CF": 88.6,
+   "mass_CWR": 97.4,
+   "mbf_1570_CF": 118,
+   "mbf_1570_CWR": 128,
+   "mbf_1770_CF": 134,
+   "mbf_1770_CWR": 114,
+   "mbf_1960_CF": 148,
+   "mbf_1960_CWR": 160
+  },
+  {
+   "d": 18,
+   "mass_CF": 112,
+   "mass_CWR": 123,
+   "mbf_1570_CF": 150,
+   "mbf_1570_CWR": 162,
+   "mbf_1770_CF": 169,
+   "mbf_1770_CWR": 183,
+   "mbf_1960_CF": 187,
+   "mbf_1960_CWR": 202
+  },
+  {
+   "d": 19,
+   "mass_CF": 125,
+   "mass_CWR": 137,
+   "mbf_1570_CF": 167,
+   "mbf_1570_CWR": 180,
+   "mbf_1770_CF": 188,
+   "mbf_1770_CWR": 203,
+   "mbf_1960_CF": 209,
+   "mbf_1960_CWR": 225
+  },
+  {
+   "d": 20,
+   "mass_CF": 138,
+   "mass_CWR": 152,
+   "mbf_1570_CF": 185,
+   "mbf_1570_CWR": 200,
+   "mbf_1770_CF": 209,
+   "mbf_1770_CWR": 225,
+   "mbf_1960_CF": 231,
+   "mbf_1960_CWR": 250
+  },
+  {
+   "d": 22,
+   "mass_CF": 167,
+   "mass_CWR": 184,
+   "mbf_1570_CF": 224,
+   "mbf_1570_CWR": 242,
+   "mbf_1770_CF": 253,
+   "mbf_1770_CWR": 273,
+   "mbf_1960_CF": 280,
+   "mbf_1960_CWR": 302
+  },
+  {
+   "d": 24,
+   "mass_CF": 199,
+   "mass_CWR": 219,
+   "mbf_1570_CF": 267,
+   "mbf_1570_CWR": 288,
+   "mbf_1770_CF": 301,
+   "mbf_1770_CWR": 325,
+   "mbf_1960_CF": 333,
+   "mbf_1960_CWR": 359
+  },
+  {
+   "d": 26,
+   "mass_CF": 234,
+   "mass_CWR": 257,
+   "mbf_1570_CF": 313,
+   "mbf_1570_CWR": 338,
+   "mbf_1770_CF": 353,
+   "mbf_1770_CWR": 381,
+   "mbf_1960_CF": 391,
+   "mbf_1960_CWR": 422
+  },
+  {
+   "d": 28,
+   "mass_CF": 271,
+   "mass_CWR": 298,
+   "mbf_1570_CF": 363,
+   "mbf_1570_CWR": 392,
+   "mbf_1770_CF": 409,
+   "mbf_1770_CWR": 442,
+   "mbf_1960_CF": 453,
+   "mbf_1960_CWR": 489
+  },
+  {
+   "d": 32,
+   "mass_CF": 354,
+   "mass_CWR": 390,
+   "mbf_1570_CF": 474,
+   "mbf_1570_CWR": 512,
+   "mbf_1770_CF": 534,
+   "mbf_1770_CWR": 577,
+   "mbf_1960_CF": 592,
+   "mbf_1960_CWR": 639
+  },
+  {
+   "d": 36,
+   "mass_CF": 448,
+   "mass_CWR": 493,
+   "mbf_1570_CF": 600,
+   "mbf_1570_CWR": 648,
+   "mbf_1770_CF": 676,
+   "mbf_1770_CWR": 730,
+   "mbf_1960_CF": 749,
+   "mbf_1960_CWR": 809
+  },
+  {
+   "d": 38,
+   "mass_CF": 500,
+   "mass_CWR": 550,
+   "mbf_1570_CF": 668,
+   "mbf_1570_CWR": 722,
+   "mbf_1770_CF": 753,
+   "mbf_1770_CWR": 814,
+   "mbf_1960_CF": 834,
+   "mbf_1960_CWR": 301
+  },
+  {
+   "d": 40,
+   "mass_CF": 554,
+   "mass_CWR": 609,
+   "mbf_1570_CF": 741,
+   "mbf_1570_CWR": 800,
+   "mbf_1770_CF": 835,
+   "mbf_1770_CWR": 902,
+   "mbf_1960_CF": 924,
+   "mbf_1960_CWR": 999
+  },
+  {
+   "d": 44,
+   "mass_CF": 670,
+   "mass_CWR": 737,
+   "mbf_1570_CF": 896,
+   "mbf_1570_CWR": 968,
+   "mbf_1770_CF": 1010,
+   "mbf_1770_CWR": 1091,
+   "mbf_1960_CF": 1119,
+   "mbf_1960_CWR": 1208
+  },
+  {
+   "d": 48,
+   "mass_CF": 797,
+   "mass_CWR": 877,
+   "mbf_1570_CF": 1066,
+   "mbf_1570_CWR": 1152,
+   "mbf_1770_CF": 1202,
+   "mbf_1770_CWR": 1298,
+   "mbf_1960_CF": 1331,
+   "mbf_1960_CWR": 1438
+  },
+  {
+   "d": 52,
+   "mass_CF": 936,
+   "mass_CWR": 1029,
+   "mbf_1570_CF": 1252,
+   "mbf_1570_CWR": 1352,
+   "mbf_1770_CF": 1411,
+   "mbf_1770_CWR": 1524,
+   "mbf_1960_CF": 1562,
+   "mbf_1960_CWR": 1687
+  },
+  {
+   "d": 56,
+   "mass_CF": 1085,
+   "mass_CWR": 0,
+   "mbf_1570_CF": 1451,
+   "mbf_1570_CWR": 0,
+   "mbf_1770_CF": 1636,
+   "mbf_1770_CWR": 0,
+   "mbf_1960_CF": 1812,
+   "mbf_1960_CWR": 0
+  },
+  {
+   "d": 60,
+   "mass_CF": 1246,
+   "mass_CWR": 0,
+   "mbf_1570_CF": 1666,
+   "mbf_1570_CWR": 0,
+   "mbf_1770_CF": 1878,
+   "mbf_1770_CWR": 0,
+   "mbf_1960_CF": 2080,
+   "mbf_1960_CWR": 0
+  },
+  {
+   "d": 64,
+   "mass_CF": 1417,
+   "mass_CWR": 0,
+   "mbf_1570_CF": 1896,
+   "mbf_1570_CWR": 0,
+   "mbf_1770_CF": 2137,
+   "mbf_1770_CWR": 0,
+   "mbf_1960_CF": 2367,
+   "mbf_1960_CWR": 0
+  }
+ ],
+ "note": "Named range RopeData; used only by the hidden legacy 'Rope Drum Hoist'. Same data as rope_6x37 but mass per 100 m - see data/README.md for the typos it contains."
+}

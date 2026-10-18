@@ -1,0 +1,75 @@
+{
+ "source": "'material '!B5:F13",
+ "units": {
+  "uts": "MPa",
+  "fy_t_lt20": "MPa",
+  "fy_t_20_40": "MPa",
+  "fy_t_gt40": "MPa"
+ },
+ "rows": [
+  {
+   "grade": "E 250",
+   "uts": 410.0,
+   "fy_t_lt20": 250.0,
+   "fy_t_20_40": 240.0,
+   "fy_t_gt40": 230.0
+  },
+  {
+   "grade": "E 275",
+   "uts": 430.0,
+   "fy_t_lt20": 275.0,
+   "fy_t_20_40": 265.0,
+   "fy_t_gt40": 255.0
+  },
+  {
+   "grade": "E 300",
+   "uts": 440.0,
+   "fy_t_lt20": 300.0,
+   "fy_t_20_40": 290.0,
+   "fy_t_gt40": 280.0
+  },
+  {
+   "grade": "E 350",
+   "uts": 490.0,
+   "fy_t_lt20": 350.0,
+   "fy_t_20_40": 330.0,
+   "fy_t_gt40": 320.0
+  },
+  {
+   "grade": "E 410",
+   "uts": 540.0,
+   "fy_t_lt20": 410.0,
+   "fy_t_20_40": 390.0,
+   "fy_t_gt40": 380.0
+  },
+  {
+   "grade": "E 450",
+   "uts": 570.0,
+   "fy_t_lt20": 450.0,
+   "fy_t_20_40": 430.0,
+   "fy_t_gt40": 420.0
+  },
+  {
+   "grade": "E 550",
+   "uts": 650.0,
+   "fy_t_lt20": 550.0,
+   "fy_t_20_40": 530.0,
+   "fy_t_gt40": 520.0
+  },
+  {
+   "grade": "E 600",
+   "uts": 730.0,
+   "fy_t_lt20": 600.0,
+   "fy_t_20_40": 580.0,
+   "fy_t_gt40": 570.0
+  },
+  {
+   "grade": "E 650",
+   "uts": 780.0,
+   "fy_t_lt20": 650.0,
+   "fy_t_20_40": 630.0,
+   "fy_t_gt40": 620.0
+  }
+ ],
+ "note": "IS 2062 grades; yield stress by plate thickness band (<20, 20-40, >40 mm). Not referenced by any formula."
+}

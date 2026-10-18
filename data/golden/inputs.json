@@ -1,0 +1,2536 @@
+{
+ "source": "Vertical-Lift-Gate.xlsm",
+ "sheets": {
+  "Summary": [
+   {
+    "cell": "D3",
+    "label": "1.1 Location",
+    "value": "Intake",
+    "unit": null
+   },
+   {
+    "cell": "D5",
+    "label": "1.3 Clear span",
+    "value": 3.5,
+    "unit": "m"
+   },
+   {
+    "cell": "D6",
+    "label": "1.4 Clear height",
+    "value": 2.8,
+    "unit": "m"
+   },
+   {
+    "cell": "D7",
+    "label": "1.5 Number of opening",
+    "value": 4,
+    "unit": null
+   },
+   {
+    "cell": "D8",
+    "label": "1.6 High Flood Level (HFL)",
+    "value": 745.53,
+    "unit": "m amsl"
+   },
+   {
+    "cell": "D9",
+    "label": "1.7 Normal Water Level (NWL)",
+    "value": 742,
+    "unit": "m amsl"
+   },
+   {
+    "cell": "D10",
+    "label": "1.8 Sill Level",
+    "value": 738,
+    "unit": "m amsl"
+   },
+   {
+    "cell": "D11",
+    "label": "1.9 Hoist Deck Level",
+    "value": 750.1999999999999,
+    "unit": "m amsl",
+    "formula": "=+D12+D+0.3"
+   },
+   {
+    "cell": "D12",
+    "label": "1.1 Gate operating platform",
+    "value": 747,
+    "unit": "m amsl"
+   },
+   {
+    "cell": "D13",
+    "label": "1.11 Design Head (at HFL)",
+    "value": 7.529999999999973,
+    "unit": "m",
+    "formula": "=D8-D10"
+   },
+   {
+    "cell": "D14",
+    "label": "1.12 Design Head (at NWL)",
+    "value": 4,
+    "unit": "m",
+    "formula": "=D9-D10"
+   }
+  ],
+  "Beam Spacing": [
+   {
+    "cell": "F4",
+    "label": "Number of beams",
+    "value": 5,
+    "unit": null,
+    "validation": {
+     "type": "whole",
+     "formula1": "2",
+     "formula2": "99",
+     "operator": null
+    }
+   },
+   {
+    "cell": "F5",
+    "label": "Method of beam spacing",
+    "value": "Equal moments",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "$N$6:$N$9",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "F6",
+    "label": "Spacing accuracy",
+    "value": 0,
+    "unit": "m",
+    "validation": {
+     "type": "list",
+     "formula1": "$Q$5:$Q$10",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "F7",
+    "label": "Gate height to top seal",
+    "value": 2.9,
+    "unit": "m",
+    "formula": "=Summary!D6+0.1",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*12",
+     "formula2": "0.0254*1000",
+     "operator": null
+    }
+   },
+   {
+    "cell": "F8",
+    "label": "Span between supports",
+    "value": 3.9,
+    "unit": "m",
+    "formula": "=0.2*2+Summary!D5",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*12",
+     "formula2": "0.0254*1000",
+     "operator": null
+    }
+   },
+   {
+    "cell": "F9",
+    "label": "Depth of water to sill",
+    "value": 7.529999999999973,
+    "unit": "m",
+    "formula": "=+Summary!D13",
+    "validation": {
+     "type": "decimal",
+     "formula1": "F7",
+     "formula2": "0.0254*6000",
+     "operator": null
+    }
+   },
+   {
+    "cell": "F10",
+    "label": "Upstream pool depth",
+    "value": 7.529999999999973,
+    "unit": "m",
+    "formula": "=+Summary!D13",
+    "validation": {
+     "type": "decimal",
+     "formula1": "F9",
+     "formula2": null,
+     "operator": "greaterThanOrEqual"
+    }
+   },
+   {
+    "cell": "F11",
+    "label": "Seismic OBE factor",
+    "value": 0.024,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "1",
+     "operator": null
+    }
+   },
+   {
+    "cell": "F12",
+    "label": "Density of water",
+    "value": 9.81,
+    "unit": "kN/m3"
+   }
+  ],
+  "Define Beam": [
+   {
+    "cell": "D11",
+    "label": "",
+    "value": "I Shape",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "BeamTypes",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "E11",
+    "label": "I Shape",
+    "value": "ISMB 350",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "IShape",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "D14",
+    "label": "",
+    "value": "I Shape",
+    "unit": null,
+    "formula": "=D11",
+    "validation": {
+     "type": "list",
+     "formula1": "BeamTypes",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "E14",
+    "label": "",
+    "value": "ISMB 350",
+    "unit": null,
+    "formula": "=E11",
+    "validation": {
+     "type": "list",
+     "formula1": "IShape",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "D17",
+    "label": "",
+    "value": "I Shape",
+    "unit": null,
+    "formula": "=D14",
+    "validation": {
+     "type": "list",
+     "formula1": "BeamTypes",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "E17",
+    "label": "",
+    "value": "ISMB 350",
+    "unit": null,
+    "formula": "=E14",
+    "validation": {
+     "type": "list",
+     "formula1": "IShape",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "D20",
+    "label": "",
+    "value": "I Shape",
+    "unit": null,
+    "formula": "=D17",
+    "validation": {
+     "type": "list",
+     "formula1": "BeamTypes",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "E20",
+    "label": "",
+    "value": "ISMB 350",
+    "unit": null,
+    "formula": "=E17",
+    "validation": {
+     "type": "list",
+     "formula1": "IShape",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "D23",
+    "label": "",
+    "value": "I Shape",
+    "unit": null,
+    "formula": "=D20",
+    "validation": {
+     "type": "list",
+     "formula1": "BeamTypes",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "E23",
+    "label": "",
+    "value": "ISMB 350",
+    "unit": null,
+    "formula": "=E20",
+    "validation": {
+     "type": "list",
+     "formula1": "IShape",
+     "formula2": null,
+     "operator": null
+    }
+   }
+  ],
+  "Stiffeners": [
+   {
+    "cell": "D13",
+    "label": "Vertical stiffener spacing",
+    "value": 0.3,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D14",
+    "label": "Vertical stiffener distance from gate center",
+    "value": 0.15,
+    "unit": "m",
+    "formula": "=IF(MOD(D17,2)=0,D13/2,0)",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup/2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D15",
+    "label": "Vertical stiffener depth",
+    "value": 0.3358,
+    "unit": "m",
+    "formula": "=E15"
+   },
+   {
+    "cell": "D16",
+    "label": "Vertical stiffener thickness",
+    "value": 0.01,
+    "unit": "m"
+   },
+   {
+    "cell": "D17",
+    "label": "Number of vertical stiffeners",
+    "value": 12,
+    "unit": null,
+    "validation": {
+     "type": "whole",
+     "formula1": "0",
+     "formula2": "99",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D21",
+    "label": "Vertical stiffener spacing",
+    "value": 0.3,
+    "unit": "m",
+    "formula": "=D13",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D22",
+    "label": "Vertical stiffener distance from gate center",
+    "value": 0.15,
+    "unit": "m",
+    "formula": "=D14",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D23",
+    "label": "Vertical stiffener depth",
+    "value": 0.3358,
+    "unit": "m",
+    "formula": "=D15",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D24",
+    "label": "Vertical stiffener thickness",
+    "value": 0.01,
+    "unit": "m",
+    "formula": "=D16",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D25",
+    "label": "Number of vertical stiffeners",
+    "value": 12,
+    "unit": null,
+    "formula": "=D17",
+    "validation": {
+     "type": "whole",
+     "formula1": "0",
+     "formula2": "99",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D29",
+    "label": "Vertical stiffener spacing",
+    "value": 0.3,
+    "unit": "m",
+    "formula": "=D21",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D30",
+    "label": "Vertical stiffener distance from gate center",
+    "value": 0.15,
+    "unit": "m",
+    "formula": "=D22",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D31",
+    "label": "Vertical stiffener depth",
+    "value": 0.3358,
+    "unit": "m",
+    "formula": "=D23",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D32",
+    "label": "Vertical stiffener thickness",
+    "value": 0.01,
+    "unit": "m",
+    "formula": "=D24",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D33",
+    "label": "Number of vertical stiffeners",
+    "value": 12,
+    "unit": null,
+    "formula": "=D25",
+    "validation": {
+     "type": "whole",
+     "formula1": "0",
+     "formula2": "99",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D37",
+    "label": "Vertical stiffener spacing",
+    "value": 0.3,
+    "unit": "m",
+    "formula": "=D29",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D38",
+    "label": "Vertical stiffener distance from gate center",
+    "value": 0.15,
+    "unit": "m",
+    "formula": "=D30",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D39",
+    "label": "Vertical stiffener depth",
+    "value": 0.3358,
+    "unit": "m",
+    "formula": "=D31",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D40",
+    "label": "Vertical stiffener thickness",
+    "value": 0.01,
+    "unit": "m",
+    "formula": "=D32",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D41",
+    "label": "Number of vertical stiffeners",
+    "value": 12,
+    "unit": null,
+    "formula": "=D33",
+    "validation": {
+     "type": "whole",
+     "formula1": "0",
+     "formula2": "99",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D45",
+    "label": "Vertical stiffener spacing",
+    "value": 0.3,
+    "unit": "m",
+    "formula": "=D37",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D46",
+    "label": "Vertical stiffener distance from gate center",
+    "value": 0.15,
+    "unit": "m",
+    "formula": "=D38",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D47",
+    "label": "Vertical stiffener depth",
+    "value": 0.3358,
+    "unit": "m",
+    "formula": "=D39",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D48",
+    "label": "Vertical stiffener thickness",
+    "value": 0.01,
+    "unit": "m",
+    "formula": "=D40",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D49",
+    "label": "Number of vertical stiffeners",
+    "value": 12,
+    "unit": null,
+    "formula": "=D41",
+    "validation": {
+     "type": "whole",
+     "formula1": "0",
+     "formula2": "99",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D53",
+    "label": "Vertical stiffener spacing",
+    "value": 0.3,
+    "unit": "m",
+    "formula": "=D45",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D54",
+    "label": "Vertical stiffener distance from gate center",
+    "value": 0.15,
+    "unit": "m",
+    "formula": "=D46",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D55",
+    "label": "Vertical stiffener depth",
+    "value": 0.3358,
+    "unit": "m",
+    "formula": "=D47",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D56",
+    "label": "Vertical stiffener thickness",
+    "value": 0.01,
+    "unit": "m",
+    "formula": "=D48",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "D57",
+    "label": "Number of vertical stiffeners",
+    "value": 12,
+    "unit": null,
+    "formula": "=D49",
+    "validation": {
+     "type": "whole",
+     "formula1": "0",
+     "formula2": "99",
+     "operator": null
+    }
+   }
+  ],
+  "SecProp": [
+   {
+    "cell": "I4",
+    "label": "Skinplate location",
+    "value": "Upstream",
+    "unit": "psi",
+    "validation": {
+     "type": "list",
+     "formula1": "\"Upstream,Downstream\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "S4",
+    "label": "Skinplate location Upstream Material yield strength for beams Fyb",
+    "value": 250,
+    "unit": "MPa"
+   },
+   {
+    "cell": "U4",
+    "label": "nplate location Upstream Material yield strength for beams Fyb 250 Type of Gate:",
+    "value": "Fixed Wheel (cantilevered)",
+    "unit": "psi",
+    "validation": {
+     "type": "list",
+     "formula1": "GateType",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "I5",
+    "label": "Elastic modulus E",
+    "value": 206000,
+    "unit": "MPa"
+   },
+   {
+    "cell": "S5",
+    "label": "Elastic modulus E 206000 Material yield strength for plates Fys",
+    "value": 250,
+    "unit": "MPa"
+   },
+   {
+    "cell": "I6",
+    "label": "Span between centerline of seals Lse",
+    "value": 3.6,
+    "unit": "m",
+    "formula": "=0.1+Summary!D5",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*12",
+     "formula2": "Lsup",
+     "operator": null
+    }
+   },
+   {
+    "cell": "S6",
+    "label": "Span between centerline of seals Lse Weld yield strength Fyw",
+    "value": 400,
+    "unit": "MPa"
+   },
+   {
+    "cell": "U6",
+    "label": " between centerline of seals Lse Weld yield strength Fyw 400 Wheel Contact Type:",
+    "value": "Line Contact",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"Elliptical Contact,Line Contact\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "I7",
+    "label": "Gate design factor β",
+    "value": 0.75,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.1",
+     "formula2": "1.5",
+     "operator": null
+    }
+   },
+   {
+    "cell": "S7",
+    "label": "Gate design factor β 0.75 Taper length from support tap",
+    "value": 0.2310000000000001,
+    "unit": "m",
+    "formula": "=Stiffeners!Y17",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "Lsup/2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "I8",
+    "label": "Bending safety factor Ωb",
+    "value": 1.67,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "1",
+     "formula2": "5",
+     "operator": null
+    }
+   },
+   {
+    "cell": "S8",
+    "label": "Bending safety factor Ωb 1.67 Web depth at support dweb",
+    "value": 0.25,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*1",
+     "formula2": "0.0254*200",
+     "operator": null
+    }
+   },
+   {
+    "cell": "I13",
+    "label": "",
+    "value": 0.012,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.1",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "I28",
+    "label": "",
+    "value": 0.012,
+    "unit": "m",
+    "formula": "=I13",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.1",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "I45",
+    "label": "",
+    "value": 0.012,
+    "unit": "m",
+    "formula": "=I28",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.1",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "I62",
+    "label": "",
+    "value": 0.012,
+    "unit": "m",
+    "formula": "=I45",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.1",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "I79",
+    "label": "",
+    "value": 0.012,
+    "unit": "m",
+    "formula": "=I62",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.1",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "I96",
+    "label": "",
+    "value": 0.012,
+    "unit": "m",
+    "formula": "=I79",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.1",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   }
+  ],
+  "Seals": [
+   {
+    "cell": "C6",
+    "label": "Seal type",
+    "value": "J Seal",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"No Lintel Seal,Center Bulb Seal,J Seal\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C7",
+    "label": "Bulb diameter B",
+    "value": 44,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "25.4*1",
+     "formula2": "25.4*4",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C8",
+    "label": "Seal stem thickness t",
+    "value": 14,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "25.4*0.25",
+     "formula2": "C7",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C9",
+    "label": "Deflection δ",
+    "value": 3,
+    "unit": "mm",
+    "validation": {
+     "type": "list",
+     "formula1": "CorAll",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C10",
+    "label": "Projection from clamp x",
+    "value": 50,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "C7/2",
+     "formula2": "25.4*6",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C11",
+    "label": "Static coefficient of friction μ",
+    "value": 0.2,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "1.5",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C13",
+    "label": "Clamp / mount bar width cw",
+    "value": 80,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "1",
+     "formula2": "25.4*6",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C14",
+    "label": "Clamp bar thickness ct",
+    "value": 12,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.25",
+     "formula2": "25.4*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C15",
+    "label": "Mount bar thickness mt",
+    "value": 12,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "25.4*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C28",
+    "label": "Seal type",
+    "value": "J Seal",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"Center Bulb Seal,J Seal\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C29",
+    "label": "Bulb diameter B",
+    "value": 44,
+    "unit": "mm",
+    "formula": "=C7",
+    "validation": {
+     "type": "decimal",
+     "formula1": "25.4*1",
+     "formula2": "25.4*4",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C30",
+    "label": "Seal stem thickness t",
+    "value": 14,
+    "unit": "mm",
+    "formula": "=C8",
+    "validation": {
+     "type": "decimal",
+     "formula1": "25.4*0.25",
+     "formula2": "C7",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C31",
+    "label": "Deflection δ",
+    "value": 3,
+    "unit": "mm",
+    "formula": "=C9",
+    "validation": {
+     "type": "list",
+     "formula1": "CorAll",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C32",
+    "label": "Projection from clamp x",
+    "value": 50,
+    "unit": "mm",
+    "formula": "=C10",
+    "validation": {
+     "type": "decimal",
+     "formula1": "C7/2",
+     "formula2": "25.4*6",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C33",
+    "label": "Static coefficient of friction μ",
+    "value": 0.2,
+    "unit": null,
+    "formula": "=C11",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "1.5",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C35",
+    "label": "Clamp / mount bar width cw",
+    "value": 80,
+    "unit": "mm",
+    "formula": "=C13",
+    "validation": {
+     "type": "decimal",
+     "formula1": "1",
+     "formula2": "25.4*6",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C36",
+    "label": "Clamp bar thickness ct",
+    "value": 12,
+    "unit": "mm",
+    "formula": "=C14",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.25",
+     "formula2": "25.4*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C37",
+    "label": "Mount bar thickness mt",
+    "value": 12,
+    "unit": "mm",
+    "formula": "=C15",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "25.4*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C50",
+    "label": "Seal type",
+    "value": "Wedge Seal",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"Center Bulb Seal,J Seal,Wedge Seal\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C51",
+    "label": "Bulb diameter B",
+    "value": 1.75,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "25.4*1",
+     "formula2": "25.4*4",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C52",
+    "label": "Seal stem thickness t",
+    "value": 12,
+    "unit": "mm"
+   },
+   {
+    "cell": "C53",
+    "label": "Deflection δ",
+    "value": 0.125,
+    "unit": "mm",
+    "validation": {
+     "type": "list",
+     "formula1": "CorAll",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C54",
+    "label": "Projection from clamp x",
+    "value": 1.5,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "C7/2",
+     "formula2": "25.4*6",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C55",
+    "label": "Static coefficient of friction μ",
+    "value": 0.2,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "1.5",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C57",
+    "label": "Clamp / mount bar width cw",
+    "value": 60,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "1",
+     "formula2": "25.4*6",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C58",
+    "label": "Clamp bar thickness ct",
+    "value": 12,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.25",
+     "formula2": "25.4*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C59",
+    "label": "Mount bar thickness mt",
+    "value": 0.5625,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "25.4*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C60",
+    "label": "Top bar thickness tbt",
+    "value": 12,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "25.4*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C61",
+    "label": "Seal height sh",
+    "value": 50,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "1",
+     "formula2": "25.4*6",
+     "operator": null
+    }
+   }
+  ],
+  "Wheel Spacing": [
+   {
+    "cell": "E4",
+    "label": "Number of wheels",
+    "value": 2,
+    "unit": null,
+    "validation": {
+     "type": "whole",
+     "formula1": "2",
+     "formula2": "99",
+     "operator": null
+    }
+   },
+   {
+    "cell": "E5",
+    "label": "Method of wheel spacing",
+    "value": "Equal load",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "$K$6:$K$7",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "E6",
+    "label": "Spacing accuracy",
+    "value": 0,
+    "unit": "m"
+   },
+   {
+    "cell": "E7",
+    "label": "Seismic OBE factor",
+    "value": "Included",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"Included,Excluded\"",
+     "formula2": null,
+     "operator": null
+    }
+   }
+  ],
+  "Wheel Design": [
+   {
+    "cell": "C6",
+    "label": "Design wheel load P",
+    "value": 561.7474559662635,
+    "unit": "kN",
+    "validation": {
+     "type": "decimal",
+     "formula1": "C5",
+     "formula2": "500000",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C7",
+    "label": "Wheel diameter D",
+    "value": 0.15,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "0.0254*42",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C8",
+    "label": "Wheel cross-radius Rt",
+    "value": 0.9,
+    "unit": "m"
+   },
+   {
+    "cell": "C9",
+    "label": "Track cross-radius (0=none) RT",
+    "value": 0,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "1000",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C10",
+    "label": "Poissons ratio",
+    "value": 0.3,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.2",
+     "formula2": "0.5",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C11",
+    "label": "Elastic modulus",
+    "value": 193053,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C12",
+    "label": "Minimum wheel / track hardness",
+    "value": 255,
+    "unit": "BHN",
+    "validation": {
+     "type": "whole",
+     "formula1": "50",
+     "formula2": "500",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C22",
+    "label": "Allowance on each side of contact c",
+    "value": 0.01,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C23",
+    "label": "Wheel tread width bt",
+    "value": 0.07,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "0.0254*10",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C24",
+    "label": "Wheel center thickness t",
+    "value": 0.01905,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.25",
+     "formula2": "C23",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C25",
+    "label": "Wheel hub OD dh",
+    "value": 0.18,
+    "unit": "m"
+   },
+   {
+    "cell": "C26",
+    "label": "Wheel rim ID dt",
+    "value": 0.2,
+    "unit": "m"
+   },
+   {
+    "cell": "C30",
+    "label": "Design wheel load P",
+    "value": 165,
+    "unit": "kN"
+   },
+   {
+    "cell": "C31",
+    "label": "Wheel Diameter D",
+    "value": 0.25,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.15",
+     "formula2": "0.15*7",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C32",
+    "label": "Thread Width of wheel l",
+    "value": 0.08,
+    "unit": "m"
+   },
+   {
+    "cell": "C33",
+    "label": "Yield Strength Yp",
+    "value": 560,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C34",
+    "label": "Ultimate Tensile Strength UTS",
+    "value": 700,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C35",
+    "label": "Minimum wheel / track hardness",
+    "value": 250,
+    "unit": "BHN"
+   },
+   {
+    "cell": "C39",
+    "label": "Factor of Safety FOS",
+    "value": 3,
+    "unit": null
+   },
+   {
+    "cell": "C46",
+    "label": "Corner roundind on each side fo",
+    "value": 0.005,
+    "unit": "m",
+    "formula": "=0.005"
+   },
+   {
+    "cell": "C57",
+    "label": "Modulus of elasticity of track material Es",
+    "value": 206000,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C58",
+    "label": "Selection of beam",
+    "value": "ISMB 200",
+    "unit": null
+   },
+   {
+    "cell": "C59",
+    "label": "length of track plate b",
+    "value": 0.1,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "C32",
+     "formula2": "W47",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C60",
+    "label": "thickness of the track plate d",
+    "value": 0.01,
+    "unit": "m"
+   },
+   {
+    "cell": "C62",
+    "label": "Selection of concrete",
+    "value": "M25",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "CType",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C73",
+    "label": "Lateral wheel load factor Wlat",
+    "value": 0.3,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "0.5",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C74",
+    "label": "Wheel hub length bh",
+    "value": 0.2,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "25",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C75",
+    "label": "Wheel axle diameter d",
+    "value": 0.1,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "C25",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C76",
+    "label": "Wheel axle yield strength FyS",
+    "value": 723.949515782678,
+    "unit": "MPa",
+    "formula": "=CONVERT(105000,\"psi\",\"Pa\")/10^6"
+   },
+   {
+    "cell": "C77",
+    "label": "Axle support plate yield strength FyB",
+    "value": 344.73786465841806,
+    "unit": "MPa",
+    "formula": "=CONVERT(50000,\"psi\",\"Pa\")/10^6"
+   },
+   {
+    "cell": "C78",
+    "label": "Support member thickness c",
+    "value": 0.032,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.375",
+     "formula2": "0.0254*4",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C79",
+    "label": "Clearance - wheel to member b",
+    "value": 0.013,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C80",
+    "label": "Allowable wheel bearing stress Fbe",
+    "value": 130.06959633562116,
+    "unit": "MPa",
+    "formula": "=CONVERT(18865,\"psi\",\"Pa\")/10^6"
+   },
+   {
+    "cell": "C105",
+    "label": "Skinplate face to wheel axis y",
+    "value": 0.1,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "C75/2+C103",
+     "formula2": "C104-C75/2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C125",
+    "label": "Lateral wheel load Wlat",
+    "value": 0.3,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "0.5",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C126",
+    "label": "Wheel hub length bh",
+    "value": 0.08,
+    "unit": "m",
+    "formula": "=C32",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "0.0254*15",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C127",
+    "label": "Wheel axle diameter d1",
+    "value": 0.12,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "IF(PType=\"Line Contact\",C31,C25)",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C128",
+    "label": "Axle diameter at R1 d2",
+    "value": 0.06,
+    "unit": "m",
+    "formula": "=C127/2",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "C127",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C129",
+    "label": "Wheel axle yield strength FyS",
+    "value": 496,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C130",
+    "label": "Axle support plate yield strength FyB",
+    "value": 250,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C131",
+    "label": "Main support member thickness c",
+    "value": 0.03,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*0.375",
+     "formula2": "0.0254*4",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C132",
+    "label": "Clearance - wheel to member b",
+    "value": 0.002,
+    "unit": "m",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C133",
+    "label": "Secondary support member thickness a",
+    "value": 0.01,
+    "unit": "m",
+    "formula": "=Stiffeners!D16",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "0.0254*2",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C134",
+    "label": "Allowable wheel bearing stress Fbe",
+    "value": 130,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C135",
+    "label": "Wheel axle support span Lr",
+    "value": 0.2310000000000001,
+    "unit": "m",
+    "formula": "=Stiffeners!Y17",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.0254*1",
+     "formula2": "0.0254*36",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C159",
+    "label": "Skinplate face to wheel axis y",
+    "value": 0.144,
+    "unit": "m",
+    "formula": "=Q161/1000"
+   }
+  ],
+  "Downpull": [
+   {
+    "cell": "C6",
+    "label": "Gate location",
+    "value": "Tunnel",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"Face,Tunnel\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C7",
+    "label": "Gate bottom angle θ",
+    "value": 0,
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"0,20,30,45\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C8",
+    "label": "Bottom lip ratio e/d",
+    "value": 0,
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"0,0.15,0.30,0.45,0.60\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C10",
+    "label": "Clearance upstream of gate a1",
+    "value": 0.15239999999999998,
+    "unit": "m",
+    "formula": "=6*25.4/1000",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "100*25.4",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C11",
+    "label": "Recess depth a\"2",
+    "value": 0.10001249999999999,
+    "unit": "m",
+    "formula": "=3.9375*25.4/1000",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "24*25.4",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C12",
+    "label": "Maximum total flow Q",
+    "value": 90,
+    "unit": "m3/s",
+    "formula": "=3000*0.03",
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": null,
+     "operator": "greaterThan"
+    }
+   },
+   {
+    "cell": "C25",
+    "label": "Gate opening ratio x",
+    "value": 0.01,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "0.01",
+     "formula2": "0.99",
+     "operator": null
+    }
+   }
+  ],
+  "Operation": [
+   {
+    "cell": "C5",
+    "label": "Ballast weight in air",
+    "value": 0,
+    "unit": null,
+    "validation": {
+     "type": "whole",
+     "formula1": "0",
+     "formula2": "100000",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C6",
+    "label": "Ballast density",
+    "value": 7849.05,
+    "unit": null
+   },
+   {
+    "cell": "F6",
+    "label": "Ballast density 7849.05  kg/m^3",
+    "value": "7849.05 kg/cu.m for steel or iron ballast",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "Ballast",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C7",
+    "label": "Wheel bearing friction coefficient",
+    "value": 0.02,
+    "unit": null,
+    "validation": {
+     "type": "decimal",
+     "formula1": "0",
+     "formula2": "1",
+     "operator": null
+    }
+   },
+   {
+    "cell": "F7",
+    "label": "Wheel bearing friction coefficient 0.02",
+    "value": "0.02 anti-friction bearings (static)",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "friction",
+     "formula2": null,
+     "operator": null
+    }
+   }
+  ],
+  "Rope Drum Hoist": [
+   {
+    "cell": "D7",
+    "label": "Design Lifitng Load FLd",
+    "value": 12.076051190028823,
+    "unit": "Ton",
+    "formula": "=D6"
+   },
+   {
+    "cell": "D9",
+    "label": "Rope diameter dR",
+    "value": 12,
+    "unit": "mm"
+   },
+   {
+    "cell": "D10",
+    "label": "Rope Grade RG",
+    "value": "1570CWR",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"1570CF,1570CWR,1770CF,1770CWR,1960CF,1960CWR\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "D12",
+    "label": "Number of drums",
+    "value": 2,
+    "unit": null
+   },
+   {
+    "cell": "D14",
+    "label": "No.of sheave n",
+    "value": 1,
+    "unit": null
+   },
+   {
+    "cell": "D15",
+    "label": "Efficiency of sheave ns",
+    "value": 0.95,
+    "unit": null
+   },
+   {
+    "cell": "D20",
+    "label": "Design diameter of drum Dm",
+    "value": 300,
+    "unit": "mm"
+   },
+   {
+    "cell": "D21",
+    "label": "Design diameter of sheave dm",
+    "value": 200,
+    "unit": "mm"
+   },
+   {
+    "cell": "D22",
+    "label": "Sheave pulley ns",
+    "value": 0.9025,
+    "unit": null,
+    "formula": "=0.95^2"
+   },
+   {
+    "cell": "D23",
+    "label": "Reducer nR",
+    "value": 0.9,
+    "unit": null
+   },
+   {
+    "cell": "D24",
+    "label": "1st Gear n1",
+    "value": 0.9,
+    "unit": null
+   },
+   {
+    "cell": "D25",
+    "label": "2nd Gear n2",
+    "value": 0.95,
+    "unit": null
+   },
+   {
+    "cell": "D26",
+    "label": "Drum nD",
+    "value": 0.95,
+    "unit": null
+   },
+   {
+    "cell": "D27",
+    "label": "Bearing nB",
+    "value": 0.95,
+    "unit": null
+   },
+   {
+    "cell": "D28",
+    "label": "Overall Efficiency nO",
+    "value": 0.626762559375,
+    "unit": null,
+    "formula": "=+D22*D23*D24*D25*D26*D27"
+   },
+   {
+    "cell": "D30",
+    "label": "Motor rpm N",
+    "value": 1000,
+    "unit": "rpm",
+    "validation": {
+     "type": "list",
+     "formula1": "\"334,375,428,500,600,750,1000,1500,3000\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "D32",
+    "label": "Number of wire rope",
+    "value": 2,
+    "unit": null
+   },
+   {
+    "cell": "D37",
+    "label": "Design Capacity of motor Nid",
+    "value": 0.52,
+    "unit": "kW"
+   },
+   {
+    "cell": "D38",
+    "label": "Average force of person for operation",
+    "value": 10,
+    "unit": "kg"
+   },
+   {
+    "cell": "D39",
+    "label": "Handle diameter Dh",
+    "value": 600,
+    "unit": "mm"
+   }
+  ],
+  "Embedded": [
+   {
+    "cell": "C6",
+    "label": "Seal plate width",
+    "value": 80,
+    "unit": "mm"
+   },
+   {
+    "cell": "C7",
+    "label": "Seal plate thickness",
+    "value": 10,
+    "unit": "mm"
+   },
+   {
+    "cell": "C8",
+    "label": "Precompression",
+    "value": 4,
+    "unit": "mm"
+   },
+   {
+    "cell": "C19",
+    "label": "Design thickness of track rail",
+    "value": 10,
+    "unit": "mm"
+   },
+   {
+    "cell": "C20",
+    "label": "Width of track plate",
+    "value": 80,
+    "unit": "mm"
+   },
+   {
+    "cell": "C23",
+    "label": "Design offset downstream corner",
+    "value": 50,
+    "unit": "mm"
+   },
+   {
+    "cell": "C31",
+    "label": "Channel section selection",
+    "value": "ISMC 200",
+    "unit": null
+   },
+   {
+    "cell": "D31",
+    "label": "Channel section selection ISMC 200",
+    "value": "ISMC 250",
+    "unit": null
+   },
+   {
+    "cell": "E31",
+    "label": "Channel section selection ISMC 200 ISMC 250",
+    "value": "ISMB 350",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "IShape",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "F31",
+    "label": "Channel section selection ISMC 200 ISMC 250 ISMB 350",
+    "value": "ISMB 200",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "IShape",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "G31",
+    "label": "Channel section selection ISMC 200 ISMC 250 ISMB 350 ISMB 200",
+    "value": "ISMB 100",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "IShape",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C42",
+    "label": "Thickness of holding plate",
+    "value": 12,
+    "unit": "mm"
+   },
+   {
+    "cell": "C43",
+    "label": "Width of holding plate",
+    "value": 477,
+    "unit": "mm",
+    "formula": "=+C21+C35+D35"
+   },
+   {
+    "cell": "C51",
+    "label": "Anchor spacing",
+    "value": 300,
+    "unit": "mm"
+   },
+   {
+    "cell": "C54",
+    "label": "Anchor spacing for sill beam",
+    "value": 300,
+    "unit": "mm"
+   },
+   {
+    "cell": "C55",
+    "label": "Sill seal plate",
+    "value": 80,
+    "unit": "mm"
+   },
+   {
+    "cell": "C56",
+    "label": "Sill plate thickness",
+    "value": 10,
+    "unit": "mm"
+   },
+   {
+    "cell": "C59",
+    "label": "Anchor spacing for sill beam",
+    "value": 300,
+    "unit": "mm"
+   },
+   {
+    "cell": "C60",
+    "label": "Sill seal plate",
+    "value": 80,
+    "unit": "mm"
+   },
+   {
+    "cell": "C61",
+    "label": "Sill plate thickness",
+    "value": 10,
+    "unit": "mm"
+   }
+  ],
+  "Hoist(Rope Drum)": [
+   {
+    "cell": "C5",
+    "label": "Lifting load",
+    "value": 118,
+    "unit": "kN"
+   },
+   {
+    "cell": "C6",
+    "label": "Lifting height",
+    "value": 9.299999999999955,
+    "unit": "m",
+    "formula": "=Summary!D11-D-Summary!D10"
+   },
+   {
+    "cell": "C7",
+    "label": "No. of Drums",
+    "value": 2,
+    "unit": null
+   },
+   {
+    "cell": "C8",
+    "label": "No of rope fall/drum",
+    "value": 2,
+    "unit": null
+   },
+   {
+    "cell": "C9",
+    "label": "Efficiency of gate pulley",
+    "value": 0.95,
+    "unit": null
+   },
+   {
+    "cell": "C11",
+    "label": "Rope Type",
+    "value": "6X37M(18/12/6-1)",
+    "unit": null
+   },
+   {
+    "cell": "C12",
+    "label": "Rope Grade",
+    "value": 1960,
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"1570,1770,1960\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C13",
+    "label": "Type of rope",
+    "value": "Fibre Core(CF)",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"Fibre Core(CF), Steel Core(CWR)\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C14",
+    "label": "Rope Dia",
+    "value": 28,
+    "unit": "mm"
+   },
+   {
+    "cell": "C15",
+    "label": "Drum pcd",
+    "value": 700,
+    "unit": "mm",
+    "validation": {
+     "type": "decimal",
+     "formula1": "20*C14",
+     "formula2": "1000000",
+     "operator": null
+    }
+   },
+   {
+    "cell": "C25",
+    "label": "Worm reducer",
+    "value": 0.42,
+    "unit": null
+   },
+   {
+    "cell": "D25",
+    "label": "Worm reducer  0.42",
+    "value": 0.75,
+    "unit": null
+   },
+   {
+    "cell": "C35",
+    "label": "Motor",
+    "value": "AM 132-S-6",
+    "unit": null
+   },
+   {
+    "cell": "C36",
+    "label": "Rated power",
+    "value": 3,
+    "unit": "HP"
+   },
+   {
+    "cell": "C37",
+    "label": "Rated speed",
+    "value": 925,
+    "unit": "rpm"
+   },
+   {
+    "cell": "C40",
+    "label": "Worm reduction ratio",
+    "value": 60,
+    "unit": null
+   },
+   {
+    "cell": "D40",
+    "label": "Worm reduction ratio 60",
+    "value": 1,
+    "unit": ":"
+   },
+   {
+    "cell": "C41",
+    "label": "Size",
+    "value": "7 FU",
+    "unit": null
+   },
+   {
+    "cell": "C42",
+    "label": "Input HP",
+    "value": 9,
+    "unit": null
+   },
+   {
+    "cell": "C43",
+    "label": "Input rpm",
+    "value": 1000,
+    "unit": null
+   },
+   {
+    "cell": "C44",
+    "label": "output torque",
+    "value": 2880,
+    "unit": "N.m"
+   },
+   {
+    "cell": "C48",
+    "label": "Gear Type",
+    "value": "20 Deg Full Depth Involute",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"20 Deg Full Depth Involute,20 Deg Stub Involute\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C50",
+    "label": "Drum gear/pinion",
+    "value": 115,
+    "unit": null
+   },
+   {
+    "cell": "D50",
+    "label": "Drum gear/pinion 115",
+    "value": 20,
+    "unit": ":"
+   },
+   {
+    "cell": "C51",
+    "label": "2nd Gear/pinion",
+    "value": 121,
+    "unit": null
+   },
+   {
+    "cell": "D51",
+    "label": "2nd Gear/pinion 121",
+    "value": 20,
+    "unit": ":"
+   },
+   {
+    "cell": "C67",
+    "label": "Material",
+    "value": "Cast Steel",
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "\"Cast Steel,Cast Iron,Mild Steel\"",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C68",
+    "label": "Material Grade",
+    "value": "280-520N",
+    "unit": null
+   },
+   {
+    "cell": "C69",
+    "label": "Ultimate tensile stress",
+    "value": 520,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C70",
+    "label": "Yield stress",
+    "value": 280,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C77",
+    "label": "Drum shell thickness",
+    "value": 25,
+    "unit": "mm"
+   },
+   {
+    "cell": "C89",
+    "label": "Adopted Drum length",
+    "value": 0.5,
+    "unit": "m"
+   },
+   {
+    "cell": "C116",
+    "label": "Material",
+    "value": "Cast Steel",
+    "unit": null
+   },
+   {
+    "cell": "C117",
+    "label": "Grade",
+    "value": "280-520N",
+    "unit": null
+   },
+   {
+    "cell": "C118",
+    "label": "Ultimate Tensile stress",
+    "value": 520,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C119",
+    "label": "Yield stress",
+    "value": 280,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C124",
+    "label": "Material",
+    "value": "Cast Steel",
+    "unit": null
+   },
+   {
+    "cell": "C125",
+    "label": "Grade",
+    "value": "340-570N",
+    "unit": null
+   },
+   {
+    "cell": "C126",
+    "label": "Ultimate Tensile stress",
+    "value": 570,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C127",
+    "label": "Yield stress",
+    "value": 340,
+    "unit": "MPa"
+   },
+   {
+    "cell": "E131",
+    "label": "Drum Gear N",
+    "value": 12,
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "$W$3:$W$19",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "E135",
+    "label": "2nd Gear N",
+    "value": 8,
+    "unit": null,
+    "validation": {
+     "type": "list",
+     "formula1": "$W$3:$W$19",
+     "formula2": null,
+     "operator": null
+    }
+   },
+   {
+    "cell": "C144",
+    "label": "AC",
+    "value": 40,
+    "unit": "mm"
+   },
+   {
+    "cell": "C146",
+    "label": "BD",
+    "value": 140,
+    "unit": "mm"
+   },
+   {
+    "cell": "C150",
+    "label": "Material",
+    "value": "40 C8(IS 1570)",
+    "unit": null
+   },
+   {
+    "cell": "C151",
+    "label": "Ultimate Tensile Stress",
+    "value": 580,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C152",
+    "label": "Yield Stress",
+    "value": 320,
+    "unit": "MPa"
+   },
+   {
+    "cell": "C199",
+    "label": "Material of shaft",
+    "value": "Wrought Steel",
+    "unit": null
+   },
+   {
+    "cell": "C200",
+    "label": "Grade",
+    "value": "40C8",
+    "unit": null
+   },
+   {
+    "cell": "C201",
+    "label": "UTS",
+    "value": 580,
+    "unit": "Mpa"
+   },
+   {
+    "cell": "C202",
+    "label": "Yp",
+    "value": 320,
+    "unit": "Mpa",
+    "formula": "=320"
+   },
+   {
+    "cell": "C203",
+    "label": "Dia of shaft",
+    "value": 0.085,
+    "unit": "m"
+   },
+   {
+    "cell": "C208",
+    "label": "Thickness",
+    "value": 20,
+    "unit": "mm"
+   },
+   {
+    "cell": "C343",
+    "label": "Handle radius",
+    "value": 0.4,
+    "unit": "m"
+   },
+   {
+    "cell": "C344",
+    "label": "Handle rpm",
+    "value": 50,
+    "unit": "rpm"
+   },
+   {
+    "cell": "C346",
+    "label": "Sprocket Ratio",
+    "value": 3,
+    "unit": null
+   },
+   {
+    "cell": "C348",
+    "label": "Efficiency of sprocket",
+    "value": 0.95,
+    "unit": null
+   }
+  ]
+ }
+}

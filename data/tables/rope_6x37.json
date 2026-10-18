@@ -1,0 +1,306 @@
+{
+ "source": "'6x37 Rope specification'!B7:J31",
+ "units": {
+  "d": "mm",
+  "mass_CF": "kg/m",
+  "mass_CWR": "kg/m",
+  "mbf_1570_CF": "kN",
+  "mbf_1570_CWR": "kN",
+  "mbf_1770_CF": "kN",
+  "mbf_1770_CWR": "kN",
+  "mbf_1960_CF": "kN",
+  "mbf_1960_CWR": "kN"
+ },
+ "rows": [
+  {
+   "d": 8,
+   "mass_CF": 0.221,
+   "mass_CWR": 0.244,
+   "mbf_1570_CF": 30,
+   "mbf_1570_CWR": 32,
+   "mbf_1770_CF": 33,
+   "mbf_1770_CWR": 36,
+   "mbf_1960_CF": 37,
+   "mbf_1960_CWR": 40
+  },
+  {
+   "d": 9,
+   "mass_CF": 0.28,
+   "mass_CWR": 0.308,
+   "mbf_1570_CF": 37,
+   "mbf_1570_CWR": 40,
+   "mbf_1770_CF": 42,
+   "mbf_1770_CWR": 46,
+   "mbf_1960_CF": 47,
+   "mbf_1960_CWR": 51
+  },
+  {
+   "d": 10,
+   "mass_CF": 0.34600000000000003,
+   "mass_CWR": 0.381,
+   "mbf_1570_CF": 46,
+   "mbf_1570_CWR": 50,
+   "mbf_1770_CF": 52,
+   "mbf_1770_CWR": 56,
+   "mbf_1960_CF": 58,
+   "mbf_1960_CWR": 62
+  },
+  {
+   "d": 11,
+   "mass_CF": 0.419,
+   "mass_CWR": 0.461,
+   "mbf_1570_CF": 56,
+   "mbf_1570_CWR": 60,
+   "mbf_1770_CF": 63,
+   "mbf_1770_CWR": 68,
+   "mbf_1960_CF": 70,
+   "mbf_1960_CWR": 76
+  },
+  {
+   "d": 12,
+   "mass_CF": 0.498,
+   "mass_CWR": 0.5479999999999999,
+   "mbf_1570_CF": 67,
+   "mbf_1570_CWR": 72,
+   "mbf_1770_CF": 75,
+   "mbf_1770_CWR": 81,
+   "mbf_1960_CF": 83,
+   "mbf_1960_CWR": 90
+  },
+  {
+   "d": 13,
+   "mass_CF": 0.585,
+   "mass_CWR": 0.643,
+   "mbf_1570_CF": 78,
+   "mbf_1570_CWR": 84,
+   "mbf_1770_CF": 88,
+   "mbf_1770_CWR": 95,
+   "mbf_1960_CF": 98,
+   "mbf_1960_CWR": 105
+  },
+  {
+   "d": 14,
+   "mass_CF": 0.6779999999999999,
+   "mass_CWR": 0.746,
+   "mbf_1570_CF": 91,
+   "mbf_1570_CWR": 98,
+   "mbf_1770_CF": 102,
+   "mbf_1770_CWR": 110,
+   "mbf_1960_CF": 113,
+   "mbf_1960_CWR": 122
+  },
+  {
+   "d": 16,
+   "mass_CF": 0.8859999999999999,
+   "mass_CWR": 0.9740000000000001,
+   "mbf_1570_CF": 118,
+   "mbf_1570_CWR": 128,
+   "mbf_1770_CF": 134,
+   "mbf_1770_CWR": 144,
+   "mbf_1960_CF": 148,
+   "mbf_1960_CWR": 160
+  },
+  {
+   "d": 18,
+   "mass_CF": 1.12,
+   "mass_CWR": 1.23,
+   "mbf_1570_CF": 150,
+   "mbf_1570_CWR": 162,
+   "mbf_1770_CF": 169,
+   "mbf_1770_CWR": 183,
+   "mbf_1960_CF": 187,
+   "mbf_1960_CWR": 202
+  },
+  {
+   "d": 19,
+   "mass_CF": 1.25,
+   "mass_CWR": 1.37,
+   "mbf_1570_CF": 167,
+   "mbf_1570_CWR": 180,
+   "mbf_1770_CF": 188,
+   "mbf_1770_CWR": 203,
+   "mbf_1960_CF": 209,
+   "mbf_1960_CWR": 225
+  },
+  {
+   "d": 20,
+   "mass_CF": 1.38,
+   "mass_CWR": 1.52,
+   "mbf_1570_CF": 185,
+   "mbf_1570_CWR": 200,
+   "mbf_1770_CF": 209,
+   "mbf_1770_CWR": 225,
+   "mbf_1960_CF": 231,
+   "mbf_1960_CWR": 250
+  },
+  {
+   "d": 22,
+   "mass_CF": 1.67,
+   "mass_CWR": 1.84,
+   "mbf_1570_CF": 224,
+   "mbf_1570_CWR": 242,
+   "mbf_1770_CF": 253,
+   "mbf_1770_CWR": 273,
+   "mbf_1960_CF": 280,
+   "mbf_1960_CWR": 302
+  },
+  {
+   "d": 24,
+   "mass_CF": 1.99,
+   "mass_CWR": 2.19,
+   "mbf_1570_CF": 267,
+   "mbf_1570_CWR": 288,
+   "mbf_1770_CF": 301,
+   "mbf_1770_CWR": 325,
+   "mbf_1960_CF": 333,
+   "mbf_1960_CWR": 359
+  },
+  {
+   "d": 26,
+   "mass_CF": 2.34,
+   "mass_CWR": 2.57,
+   "mbf_1570_CF": 313,
+   "mbf_1570_CWR": 338,
+   "mbf_1770_CF": 353,
+   "mbf_1770_CWR": 381,
+   "mbf_1960_CF": 391,
+   "mbf_1960_CWR": 422
+  },
+  {
+   "d": 28,
+   "mass_CF": 2.71,
+   "mass_CWR": 2.98,
+   "mbf_1570_CF": 363,
+   "mbf_1570_CWR": 392,
+   "mbf_1770_CF": 409,
+   "mbf_1770_CWR": 442,
+   "mbf_1960_CF": 453,
+   "mbf_1960_CWR": 489
+  },
+  {
+   "d": 32,
+   "mass_CF": 3.54,
+   "mass_CWR": 3.9,
+   "mbf_1570_CF": 474,
+   "mbf_1570_CWR": 512,
+   "mbf_1770_CF": 534,
+   "mbf_1770_CWR": 577,
+   "mbf_1960_CF": 592,
+   "mbf_1960_CWR": 639
+  },
+  {
+   "d": 36,
+   "mass_CF": 4.48,
+   "mass_CWR": 4.93,
+   "mbf_1570_CF": 600,
+   "mbf_1570_CWR": 648,
+   "mbf_1770_CF": 676,
+   "mbf_1770_CWR": 730,
+   "mbf_1960_CF": 749,
+   "mbf_1960_CWR": 809
+  },
+  {
+   "d": 38,
+   "mass_CF": 5,
+   "mass_CWR": 5.5,
+   "mbf_1570_CF": 668,
+   "mbf_1570_CWR": 722,
+   "mbf_1770_CF": 753,
+   "mbf_1770_CWR": 814,
+   "mbf_1960_CF": 834,
+   "mbf_1960_CWR": 901
+  },
+  {
+   "d": 40,
+   "mass_CF": 5.54,
+   "mass_CWR": 6.09,
+   "mbf_1570_CF": 741,
+   "mbf_1570_CWR": 800,
+   "mbf_1770_CF": 835,
+   "mbf_1770_CWR": 902,
+   "mbf_1960_CF": 924,
+   "mbf_1960_CWR": 999
+  },
+  {
+   "d": 44,
+   "mass_CF": 6.7,
+   "mass_CWR": 7.37,
+   "mbf_1570_CF": 896,
+   "mbf_1570_CWR": 968,
+   "mbf_1770_CF": 1010,
+   "mbf_1770_CWR": 1091,
+   "mbf_1960_CF": 1119,
+   "mbf_1960_CWR": 1208
+  },
+  {
+   "d": 48,
+   "mass_CF": 7.97,
+   "mass_CWR": 8.77,
+   "mbf_1570_CF": 1066,
+   "mbf_1570_CWR": 1152,
+   "mbf_1770_CF": 1202,
+   "mbf_1770_CWR": 1298,
+   "mbf_1960_CF": 1331,
+   "mbf_1960_CWR": 1438
+  },
+  {
+   "d": 52,
+   "mass_CF": 9.36,
+   "mass_CWR": 10.29,
+   "mbf_1570_CF": 1252,
+   "mbf_1570_CWR": 1352,
+   "mbf_1770_CF": 1411,
+   "mbf_1770_CWR": 11524,
+   "mbf_1960_CF": 1562,
+   "mbf_1960_CWR": 1687
+  },
+  {
+   "d": 56,
+   "mass_CF": 10.85,
+   "mass_CWR": 0,
+   "mbf_1570_CF": 1451,
+   "mbf_1570_CWR": 0,
+   "mbf_1770_CF": 1636,
+   "mbf_1770_CWR": 0,
+   "mbf_1960_CF": 1812,
+   "mbf_1960_CWR": 0
+  },
+  {
+   "d": 60,
+   "mass_CF": 12.46,
+   "mass_CWR": 0,
+   "mbf_1570_CF": 1666,
+   "mbf_1570_CWR": 0,
+   "mbf_1770_CF": 1878,
+   "mbf_1770_CWR": 0,
+   "mbf_1960_CF": 2080,
+   "mbf_1960_CWR": 0
+  },
+  {
+   "d": 64,
+   "mass_CF": 14.71,
+   "mass_CWR": 0,
+   "mbf_1570_CF": 1896,
+   "mbf_1570_CWR": 0,
+   "mbf_1770_CF": 2137,
+   "mbf_1770_CWR": 0,
+   "mbf_1960_CF": 2367,
+   "mbf_1960_CWR": 0
+  }
+ ],
+ "note": "6x37 M (18/12/6-1) wire rope, minimum breaking force by grade (N/mm2) and core. 0 = size not made with that core. Used by 'Hoist(Rope Drum)'.",
+ "errata": [
+  {
+   "d": 52,
+   "field": "mbf_1770_CWR",
+   "workbook": 11524,
+   "corrected": 1524
+  },
+  {
+   "d": 64,
+   "field": "mass_CF",
+   "workbook": 14.71,
+   "corrected": 14.17
+  }
+ ]
+}
